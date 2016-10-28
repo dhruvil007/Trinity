@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="56dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="in.djtrinity.www.trinity.AboutFragment">
+
+    <TextView
+        android:id="@+id/cultural"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryCultural"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:onClick="culture"
+        android:text="Cultural"
+        android:textColor="@android:color/white"
+        android:textSize="54sp" />
+
+    <TextView
+        android:id="@+id/tech"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryTechnical"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:onClick="tech"
+        android:text="Technical"
+        android:textColor="@android:color/white"
+        android:textSize="54sp" />
+
+    <TextView
+        android:id="@+id/sport"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimarySports"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:onClick="sport"
+        android:text="Sports"
+        android:textColor="@android:color/white"
+        android:textSize="54sp" />
+
+
+</LinearLayout>
+

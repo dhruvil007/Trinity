@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.djtrinity.www.trinity">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DJ Trinity"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name=".NotifAlarmReceiver"
+            android:enabled="true">
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.djtrinity.www.trinity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EventDetailsActivity"
+            android:label="Event Notifier"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.djtrinity.www.trinity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SportsActivity"
+            android:label="@string/title_activity_sports"
+            android:screenOrientation="portrait"
+            android:theme="@style/SportsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.djtrinity.www.trinity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TechActivity"
+            android:label="@string/title_activity_tech"
+            android:screenOrientation="portrait"
+            android:theme="@style/TechTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.djtrinity.www.trinity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CulturalActivity"
+            android:label="@string/title_activity_cultural"
+            android:theme="@style/TechTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.djtrinity.www.trinity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FullScreenViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".SnapActivity"
+            android:label="@string/title_activity_snap"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.djtrinity.www.trinity.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
